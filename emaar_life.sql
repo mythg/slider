@@ -4,7 +4,7 @@ USE `emaar_life`;
 
 CREATE TABLE IF NOT EXISTS `emaar_mantra` (
 	`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-	`mantra` TEXT DEFAULT '',
+	`mantra` TEXT, 
 	`from` varchar(256) DEFAULT NULL,
 	`author` varchar(256) DEFAULT NULL,
 	`status` tinyint(2) DEFAULT 0,
@@ -12,8 +12,6 @@ CREATE TABLE IF NOT EXISTS `emaar_mantra` (
 	`update_time` bigint(20),
 	PRIMARY KEY(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-LOCK WRITE `emaar_mantra`;
 
 INSERT INTO `emaar_mantra` (`mantra`, `from`, `author`,`status`, `create_time`, `update_time`) VALUES
 ('长风破浪会有时，直挂云帆济沧海。', '行路难', '李白', 1, 1585827864, 1585827864),
@@ -98,4 +96,3 @@ INSERT INTO `emaar_mantra` (`mantra`, `from`, `author`,`status`, `create_time`, 
 ('理想，能给天下不幸者以欢乐！', NULL, '高尔基', 1, 1585827864, 1585827864);
 
 
-UNLOCK;
