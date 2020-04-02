@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS `emaar_life`;
 USE `emaar_life`;
 
 CREATE TABLE IF NOT EXISTS `emaar_mantra` (
-	`id` big(20) auto_increment,
+	`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 	`mantra` TEXT DEFAULT '',
 	`from` varchar(256) DEFAULT NULL,
 	`author` varchar(256) DEFAULT NULL,
